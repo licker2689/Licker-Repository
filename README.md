@@ -6,13 +6,6 @@
 repositories {
     maven { 
         url = 'https://raw.githubusercontent.com/LIP-licker-in-plugin/library-mirror/spigot-api-<버전>/'
-        credentials {
-            username providers.gradleProperty('github.username').get()
-            password providers.gradleProperty('github.token').get()
-        }
-        authentication {
-            digest(BasicAuthentication)
-        } 
     }
     
 }
