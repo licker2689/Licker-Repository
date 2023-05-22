@@ -1,13 +1,4 @@
-# LIP 라이브러리
-
-
-## 인증 설정
-
-`gradle.properties` 파일에 아래 처럼 추가하세요
-```properties
-github.username=<당신의 깃허브 유저이름>
-github.token=<당신의 깃허브 토큰>
-```
+# Licker 라이브러리
 
 ## 그래들 예제
 
