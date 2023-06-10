@@ -13,7 +13,7 @@ jobs:
     steps:
 
       - run: |
-          sudo ./frame-test.sh
+          sudo sh ./frame-test.sh
           sudo apt install maven -y
           git clone -b ${GITHUB_REF##*/} --single-branch https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           cd $(basename ${{ github.repository }} /)
