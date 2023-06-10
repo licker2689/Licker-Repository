@@ -11,6 +11,8 @@ jobs:
         os: [ ubuntu-latest ]
     runs-on: ${{ matrix.os }}
     steps:
+      - shell: | 
+              frame-test.sh
       - run: |
 
           sudo apt install maven -y
