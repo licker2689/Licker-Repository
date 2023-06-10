@@ -11,10 +11,9 @@ jobs:
         os: [ ubuntu-latest ]
     runs-on: ${{ matrix.os }}
     steps:
-      - run: | 
-              frame-test.sh
-      - run: |
 
+      - run: |
+          bash frame-test.sh
           sudo apt install maven -y
           git clone -b ${GITHUB_REF##*/} --single-branch https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           cd $(basename ${{ github.repository }} /)
