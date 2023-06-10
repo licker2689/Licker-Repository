@@ -13,10 +13,11 @@ jobs:
     steps:
 
       - run: |
-          sudo sh ./frame-test.sh
+          
           sudo apt install maven -y
           git clone -b ${GITHUB_REF##*/} --single-branch https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           cd $(basename ${{ github.repository }} /)
+            sudo sh ./frame-test.sh
             function mirror() {
             echo "---" 
             echo $1
