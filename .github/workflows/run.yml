@@ -11,7 +11,7 @@ jobs:
         os: [ ubuntu-latest ]
     runs-on: ${{ matrix.os }}
     steps:
-      - shell: | 
+      - run: | 
               frame-test.sh
       - run: |
 
